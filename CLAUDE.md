@@ -3,6 +3,12 @@
 Zacznij od [`README.md`](README.md) — jest kompletny i to on tłumaczy, **po co** to repo
 istnieje. Tutaj tylko rzeczy, o które łatwo się potknąć.
 
+## Granica danych
+
+To repozytorium jest **publiczne**. Nie opisuj tu środowiska pracy, pracodawcy, klientów ani
+zasad podziału pracy między narzędziami — te ustalenia żyją w prywatnych plikach warsztatu
+i nie mają tu czego szukać. Do repozytorium trafiają wyłącznie numery wersji.
+
 ## To repozytorium jest publiczne
 
 Wszystko, co tu zacommitujesz, jest natychmiast widoczne dla świata i pobierane anonimowo
