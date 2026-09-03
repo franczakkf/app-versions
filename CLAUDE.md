@@ -40,6 +40,12 @@ kontraktu z aplikacją, którą trzeba wtedy przygotować po drugiej stronie.
 ASCII kłamałyby **w górę** — aplikacja uznałaby, że jest nowsze wydanie, i wysłała użytkownika
 po coś, czego nie ma. Walidacja jest po stronie aplikacji, ale błąd zaczyna się tutaj.
 
+## Bez CI
+
+**To repozytorium nie ma workflow i nie potrzebuje go.** Podbicie numeru wersji to jedna linia
+w pliku JSON — nie ma tu czego budować ani testować na runnerze. Zanim dodasz jakikolwiek
+workflow, odpowiedz, czego w nim nie da się zrobić na miejscu.
+
 ## Praca
 
 Podbicia wersji wykonuje pipeline wydawniczy — widać to w `git log` po commitach bota.

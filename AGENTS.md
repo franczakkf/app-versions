@@ -7,6 +7,10 @@ Najważniejsze w jednym zdaniu: **to jedyne publiczne repozytorium** wśród tyc
 zawiera wyłącznie numery wersji, i nie może z niego wyciekać nic o prywatnych repozytoriach,
 wydaniach ani użytkownikach.
 
+**To repozytorium nie ma workflow i nie potrzebuje go** — podbicie numeru wersji to jedna linia
+w pliku JSON. Zanim dodasz jakikolwiek workflow, odpowiedz, czego w nim nie da się zrobić
+na miejscu.
+
 ## Granica danych
 
 To repozytorium jest **publiczne**. Nie opisuj tu środowiska pracy, pracodawcy, klientów ani
