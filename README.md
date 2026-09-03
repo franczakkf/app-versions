@@ -63,6 +63,7 @@ Zasady po stronie aplikacji, wspólne dla wszystkich moich narzędzi:
 | Plik | Aplikacja |
 |---|---|
 | [`storytel-audio-manager.json`](storytel-audio-manager.json) | Storytel Audio Manager — lokalny menedżer audiobooków z własnego konta (Windows) |
+| [`music-library-manager.json`](music-library-manager.json) | Music Library Manager — lokalny menedżer biblioteki muzycznej z bramką jakości (Windows) |
 
 ## Aktualizacja po wydaniu
 
