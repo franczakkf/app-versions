@@ -1,4 +1,4 @@
 {
-  "notes": "1.1.1 — poprawka: dziennik spakowanej aplikacji powstawał pusty; doszły wiersze o otwartej bibliotece, silniku i odmowie",
-  "version": "1.1.1"
+  "notes": "1.1.2 — eksport nie zostawia urwanej piosenki na karcie, pelny nosnik odmawia raz ze zdaniem, okno odswieza sie szybciej przy duzej bibliotece",
+  "version": "1.1.2"
 }
