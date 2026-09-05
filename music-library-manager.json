@@ -1,4 +1,4 @@
 {
-  "notes": "0.1.0 — pierwsza wersja rozwojowa; instalatora jeszcze nie ma, numer stoi tu po to, żeby kanał aktualizacji odpowiadał zamiast milczeć",
-  "version": "0.1.0"
+  "notes": "1.0.0 — pierwsza wersja z instalatorem: bramka jakości, katalog, duplikaty, import kolekcji i eksport na karty Yoto",
+  "version": "1.0.0"
 }
