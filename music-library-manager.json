@@ -1,4 +1,4 @@
 {
-  "notes": "1.1.0 — dziennik z redakcją w %LOCALAPPDATA%, awaria okna trafia do pliku, silnik ma cztery odpowiedzi zamiast jednej",
-  "version": "1.1.0"
+  "notes": "1.1.1 — poprawka: dziennik spakowanej aplikacji powstawał pusty; doszły wiersze o otwartej bibliotece, silniku i odmowie",
+  "version": "1.1.1"
 }
