@@ -1,4 +1,4 @@
 {
-  "notes": "1.1.2 — eksport nie zostawia urwanej piosenki na karcie, pelny nosnik odmawia raz ze zdaniem, okno odswieza sie szybciej przy duzej bibliotece",
-  "version": "1.1.2"
+  "notes": "1.2.0 — ekran odkrywania: wykonawcy i albumy z katalogu YouTube Music, przy kazdym utworze widac, czy juz go masz, i zamowienie calego albumu jednym przyciskiem",
+  "version": "1.2.0"
 }
