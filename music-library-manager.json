@@ -1,4 +1,4 @@
 {
-  "notes": "1.4.0 — tagi plikow przyswojonych z dysku: ekran pokazuje, gdzie nazwa folderu mowi cos, czego tag nie niesie, i zapisuje to dopiero po Twojej decyzji",
-  "version": "1.4.0"
+  "notes": "1.4.1 — poprawka do 1.4.0: tagi w plikach .ogg i .opus naprawde sie zapisuja. Jesli poprawiales je w 1.4.0, zrob to jeszcze raz",
+  "version": "1.4.1"
 }
