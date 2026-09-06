@@ -1,4 +1,4 @@
 {
-  "notes": "1.3.0 — wykonawcy bez albumu: single stoja wsrod wydan, pojedynczy utwor zamawia sie przyciskiem w wierszu, a listy sa pelne, nie urwane do pierwszej strony",
-  "version": "1.3.0"
+  "notes": "1.4.0 — tagi plikow przyswojonych z dysku: ekran pokazuje, gdzie nazwa folderu mowi cos, czego tag nie niesie, i zapisuje to dopiero po Twojej decyzji",
+  "version": "1.4.0"
 }
