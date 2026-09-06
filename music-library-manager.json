@@ -1,4 +1,4 @@
 {
-  "notes": "1.2.0 — ekran odkrywania: wykonawcy i albumy z katalogu YouTube Music, przy kazdym utworze widac, czy juz go masz, i zamowienie calego albumu jednym przyciskiem",
-  "version": "1.2.0"
+  "notes": "1.3.0 — wykonawcy bez albumu: single stoja wsrod wydan, pojedynczy utwor zamawia sie przyciskiem w wierszu, a listy sa pelne, nie urwane do pierwszej strony",
+  "version": "1.3.0"
 }
