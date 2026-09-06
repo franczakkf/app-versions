@@ -1,4 +1,4 @@
 {
-  "notes": "1.5.0 — kopia zapasowa na nosnik zewnetrzny: caly folder biblioteki razem z katalogiem, przebieg przyrostowy i wznawialny",
-  "version": "1.5.0"
+  "notes": "1.6.0 — cala aplikacja bez myszy, okno miesci sie na ekranie 1080p przy skalowaniu 200 %, karta Wlasciwosci pliku pokazuje wersje",
+  "version": "1.6.0"
 }
