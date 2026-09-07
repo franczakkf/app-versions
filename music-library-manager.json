@@ -1,4 +1,4 @@
 {
-  "notes": "1.6.0 — cala aplikacja bez myszy, okno miesci sie na ekranie 1080p przy skalowaniu 200 %, karta Wlasciwosci pliku pokazuje wersje",
-  "version": "1.6.0"
+  "notes": "1.6.1 — odmowa serwisu mowi o przestarzalym silniku, gdy ma nowsze wydania; pietnascie regul warstwy zastosowan dostalo straznikow po serii mutacyjnej",
+  "version": "1.6.1"
 }
