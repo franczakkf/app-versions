@@ -1,0 +1,4 @@
+{
+  "version": "3.8.0",
+  "notes": "3.8.0 — 293 kontrole w jedenastu obszarach i siedmiu endpointach; aplikacja okienkowa instalowana per-user, dostarczanie z zaplombowanym korpusem i sprawdzanie aktualności wersji."
+}
