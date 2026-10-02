@@ -1,4 +1,4 @@
 {
-  "version": "3.8.0",
-  "notes": "3.8.0 — 293 kontrole w jedenastu obszarach i siedmiu endpointach; aplikacja okienkowa instalowana per-user, dostarczanie z zaplombowanym korpusem i sprawdzanie aktualności wersji."
+  "version": "4.0.0",
+  "notes": "4.0.0 — klucz korpusu pobierany przy każdej sesji z usługi aktywacji zamiast wbudowanego w aplikację, cały moduł zaplombowany, dostawy można odwołać; okno logowania Graph znów widoczne po nadaniu uprawnień."
 }
