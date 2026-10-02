@@ -1,4 +1,4 @@
 {
-  "version": "4.1.0",
-  "notes": "4.1.0 — log aktywacji odróżnia start sesji od uruchomienia oceny; podsumowanie wymaganych uprawnień nie jest już dołączane do paczki jako plik, tylko generowane po aktywacji."
+  "version": "4.1.1",
+  "notes": "4.1.1 — eksport PDF działa także wtedy, gdy Edge czeka na aktualizację: aplikacja próbuje kolejno każdej zainstalowanej przeglądarki."
 }
