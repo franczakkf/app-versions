@@ -1,4 +1,4 @@
 {
-  "version": "4.1.1",
-  "notes": "4.1.1 — eksport PDF działa także wtedy, gdy Edge czeka na aktualizację: aplikacja próbuje kolejno każdej zainstalowanej przeglądarki."
+  "version": "4.2.0",
+  "notes": "4.2.0 — przegląd każdego ustalenia i dokumentów dla klienta; ustawienia Copilota jako informacja; okno instaluje brakujące moduły; dane aplikacji w jednym folderze."
 }
