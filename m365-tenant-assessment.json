@@ -1,4 +1,4 @@
 {
-  "version": "4.2.0",
-  "notes": "4.2.0 — przegląd każdego ustalenia i dokumentów dla klienta; ustawienia Copilota jako informacja; okno instaluje brakujące moduły; dane aplikacji w jednym folderze."
+  "version": "4.2.1",
+  "notes": "4.2.1 — aplikacja działa dopiero po instalacji; okno samo zakłada aplikację SharePoint na czas oceny i usuwa ją po niej."
 }
