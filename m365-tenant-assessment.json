@@ -1,4 +1,4 @@
 {
-  "version": "4.2.1",
-  "notes": "4.2.1 — aplikacja działa dopiero po instalacji; okno samo zakłada aplikację SharePoint na czas oceny i usuwa ją po niej."
+  "version": "4.2.2",
+  "notes": "4.2.2 — jedna zawieszona kontrolka nie pomija już reszty przebiegu; spis delegacji skrzynek czytany hurtowo; pasek postępu działa przy polskich ustawieniach regionalnych."
 }
