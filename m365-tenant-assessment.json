@@ -1,4 +1,4 @@
 {
-  "version": "4.2.2",
-  "notes": "4.2.2 — jedna zawieszona kontrolka nie pomija już reszty przebiegu; spis delegacji skrzynek czytany hurtowo; pasek postępu działa przy polskich ustawieniach regionalnych."
+  "version": "4.2.7",
+  "notes": "4.2.7 — raport dla klienta w wybranym zakresie (pełny, Microsoft, CISA SCuBA, NIS2), ponowne logowanie z okna, odporność na wolne i dławione dzierżawy, szybsza instalacja modułów."
 }
