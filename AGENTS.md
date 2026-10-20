@@ -1,18 +1,31 @@
-# AGENTS.md
+# app-versions
 
-Zasady tego repozytorium są w [`CLAUDE.md`](CLAUDE.md), a uzasadnienie w [`README.md`](README.md).
-Nazwa `CLAUDE.md` jest historyczna — treść obowiązuje Cię tak samo.
+Public repository: one JSON file per app with its latest version number. Apps with private code
+read it anonymously to tell the user a newer version exists. Purpose and file contract: `README.md`.
 
-Najważniejsze w jednym zdaniu: **to jedyne publiczne repozytorium** wśród tych projektów,
-zawiera wyłącznie numery wersji, i nie może z niego wyciekać nic o prywatnych repozytoriach,
-wydaniach ani użytkownikach.
+## Commands
+- None: no build, tests or CI.
 
-**To repozytorium nie ma workflow i nie potrzebuje go** — podbicie numeru wersji to jedna linia
-w pliku JSON. Zanim dodasz jakikolwiek workflow, odpowiedz, czego w nim nie da się zrobić
-na miejscu.
+## Done =
+- Every changed JSON parses, `version` matches `^\d+(\.\d+)*$`, and a new app has its row in the
+  README table "Aplikacje".
 
-## Granica danych
+## Non-obvious conventions
+- `version` is digits and dots only. Reason: `1_0`, `+2` or non-ASCII digits can read as a higher
+  version and send users to a release that does not exist; the app validates, the error starts here.
+- Bumps usually come from each app's release pipeline. A manual edit skips that pipeline's
+  validation, so check the number yourself.
+- New app = new `<app-id>.json` + a row in the README table "Aplikacje".
+- Commit message: `<app-id>: <version>`, e.g. `storytel-audio-manager: 0.4.2`.
+- No workflows. Reason: a bump is one line of JSON; before adding one, state what cannot be done locally.
 
-To repozytorium jest **publiczne**. Nie opisuj tu środowiska pracy, pracodawcy, klientów ani
-zasad podziału pracy między narzędziami — te ustalenia żyją w prywatnych plikach warsztatu
-i nie mają tu czego szukać. Do repozytorium trafiają wyłącznie numery wersji.
+## Boundaries
+- Everything here is public and served anonymously by `raw.githubusercontent.com`, including this
+  file and `docs/notatki-agenta.md`. Commit only version numbers and short release notes — never the
+  work environment, employer, clients, private repo or release addresses, secrets or user data.
+- Field `url` (only in `storytel-audio-manager.json`) points to a private repo's release, against
+  the README contract. Owner decision pending: the app follows this link, so removing it changes the
+  app contract. Do not decide it yourself and do not copy `url` to other files.
+
+## Notes
+Read `docs/notatki-agenta.md` before a larger change; record lessons there — it is public too.

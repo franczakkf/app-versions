@@ -1,3 +1,8 @@
+---
+status: aktywny
+cel: 'Numery wersji aplikacji do anonimowego sprawdzania aktualizacji'
+stack: 'JSON'
+---
 # Numery wersji moich aplikacji
 
 Publiczne repozytorium z **jedną rzeczą na aplikację: numerem najnowszej wersji.**
@@ -64,6 +69,7 @@ Zasady po stronie aplikacji, wspólne dla wszystkich moich narzędzi:
 |---|---|
 | [`storytel-audio-manager.json`](storytel-audio-manager.json) | Storytel Audio Manager — lokalny menedżer audiobooków z własnego konta (Windows) |
 | [`music-library-manager.json`](music-library-manager.json) | Music Library Manager — lokalny menedżer biblioteki muzycznej z bramką jakości (Windows) |
+| [`m365-tenant-assessment.json`](m365-tenant-assessment.json) | M365 Tenant Assessment — ocena konfiguracji tenanta Microsoft 365 |
 
 ## Aktualizacja po wydaniu
 
