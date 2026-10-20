@@ -23,7 +23,8 @@ read it anonymously to tell the user a newer version exists. Purpose and file co
 - Everything here is public and served anonymously by `raw.githubusercontent.com`, including this
   file and `docs/notatki-agenta.md`. Commit only version numbers and short release notes — never the
   work environment, employer, clients, private repo or release addresses, secrets or user data.
-- Field `url` (only in `storytel-audio-manager.json`) points to a private repo's release, against
+  Check every new field, file or sentence for what it discloses.
+- Field `url` (only in `storytel-audio-manager.json`) points to a release page, against
   the README contract. Owner decision pending: the app follows this link, so removing it changes the
   app contract. Do not decide it yourself and do not copy `url` to other files.
 
