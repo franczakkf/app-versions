@@ -4,7 +4,8 @@ Public repository: one JSON file per app with its latest version number. Apps wi
 read it anonymously to tell the user a newer version exists. Purpose and file contract: `README.md`.
 
 ## Commands
-- None: no build, tests or CI.
+- No build, tests or CI. Local gate: `pwsh -File ./check.ps1` (gitleaks secret scan of unpushed
+  commits; gitleaks required), run by `.githooks/pre-push`. Per clone: `git config core.hooksPath .githooks`.
 
 ## Done =
 - Every changed JSON parses, `version` matches `^\d+(\.\d+)*$`, and a new app has its row in the

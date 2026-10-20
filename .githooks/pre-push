@@ -1,0 +1,4 @@
+#!/bin/sh
+# Local gate: run check.ps1 when the project has one; its exit code decides the push.
+[ -f ./check.ps1 ] || exit 0
+pwsh -NoProfile -File ./check.ps1
