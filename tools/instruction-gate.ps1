@@ -84,16 +84,51 @@ function Invoke-GitText([string[]]$GitArgs) {
     try { [Console]::OutputEncoding = $utf8; @(& git -C $repo -c core.quotepath=off @GitArgs) } finally { [Console]::OutputEncoding = $enc }
 }
 
-# Core check: the same rule as S9, here so that every agent's push runs it (Codex has no Claude hooks).
+# Core check: the same rule and paths as S9 (Test-InstructionPath), here so that every agent's push runs it
+# (Codex has no Claude hooks). Both the working tree and HEAD: the push sends commits, not the tree.
+$instructionPath = '(?i)(^|/)(AGENTS|CLAUDE)\.md$|(^|/)\.claude/rules/.+\.md$|(^|/)(home|\.claude)/docs/[^/]+\.md$'
+function Test-CoreSet([string]$Label, [string[]]$Files, $Core, [scriptblock]$Read) {
+    foreach ($rel in @(@($Files | Where-Object { $_ -match $instructionPath }) + @($Core.Keys) | Select-Object -Unique)) {
+        $text = & $Read $rel
+        if ($null -eq $text) { if ($Core.Contains($rel)) { $problems.Add("$Label brak $rel (ma zapisany hash core)") }; continue }
+        $hash = Get-GateCoreHash $text
+        if ($hash -eq 'invalid') { $problems.Add("$Label uszkodzone znaczniki core w $rel") }
+        elseif ($hash -ne $Core[$rel]) { $problems.Add("$Label blok core w $rel różni się od zatwierdzonego: po akceptacji właściciela uruchom Approve-CoreChange.ps1 -Path $rel -Apply i zacommituj") }
+    }
+}
 $listed = Invoke-GitText @('ls-files', '-co', '--exclude-standard')
 if ($LASTEXITCODE) { Write-Host 'instruction-gate: git ls-files failed, core blocks not checked'; exit 1 }
-$files = @($listed | Where-Object { $_ -match '(?i)(^|/)(AGENTS|CLAUDE)\.md$|(^|/)\.claude/rules/.+\.md$' })
-foreach ($rel in @($files + @($core.Keys) | Select-Object -Unique)) {
+Test-CoreSet '[drzewo robocze]' $listed $core {
+    param($rel)
     $full = Join-Path $repo $rel
-    if (-not [IO.File]::Exists($full)) { if ($core.Contains($rel)) { $problems.Add("brak $rel (ma zapisany hash core)") }; continue }
-    $hash = Get-GateCoreHash ([IO.File]::ReadAllText($full, $utf8))
-    if ($hash -eq 'invalid') { $problems.Add("uszkodzone znaczniki core w $rel") }
-    elseif ($hash -ne $core[$rel]) { $problems.Add("blok core w $rel różni się od zatwierdzonego: po akceptacji właściciela uruchom Approve-CoreChange.ps1 -Path $rel -Apply") }
+    if ([IO.File]::Exists($full)) { [IO.File]::ReadAllText($full, $utf8) }
+}
+& git -C $repo rev-parse --verify --quiet HEAD *> $null
+if ($LASTEXITCODE -eq 0) {
+    function Get-HeadText([string]$Rel) {
+        # Whole blob as UTF-8: native output splits on a lone CR too, so the hash would differ from the tree's.
+        $psi = [Diagnostics.ProcessStartInfo]::new('git')
+        foreach ($a in '-C', $repo, 'cat-file', 'blob', "HEAD:$Rel") { $psi.ArgumentList.Add($a) }
+        $psi.RedirectStandardOutput = $psi.RedirectStandardError = $true
+        $psi.StandardOutputEncoding = $utf8
+        $psi.UseShellExecute = $false
+        $p = [Diagnostics.Process]::Start($psi)
+        $errTask = $p.StandardError.ReadToEndAsync()
+        $text = $p.StandardOutput.ReadToEnd()
+        $p.WaitForExit(); $null = $errTask.GetAwaiter().GetResult()
+        if ($p.ExitCode) { return $null }
+        $text
+    }
+    $headCore = [ordered]@{}
+    $headCfg = Get-HeadText '.ai-template.json'
+    if ($null -ne $headCfg) {
+        try { $hd = $headCfg | ConvertFrom-Json -AsHashtable -ErrorAction Stop } catch { $hd = $null }
+        if ($hd -isnot [System.Collections.IDictionary]) { $problems.Add('[HEAD] nieczytelny .ai-template.json') }
+        elseif ($hd['core'] -is [System.Collections.IDictionary]) { $headCore = $hd['core'] }
+    }
+    $headFiles = Invoke-GitText @('ls-tree', '-r', '--name-only', 'HEAD')
+    if ($LASTEXITCODE) { Write-Host 'instruction-gate: git ls-tree failed, core blocks at HEAD not checked'; exit 1 }
+    Test-CoreSet '[HEAD]' $headFiles $headCore { param($rel) Get-HeadText $rel }
 }
 
 $summary = $null
