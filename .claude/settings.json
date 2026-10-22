@@ -1,0 +1,16 @@
+{
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "shell": "powershell",
+            "command": "& \"$env:CLAUDE_PROJECT_DIR\\.claude\\hooks\\stop-gate.ps1\"; exit $LASTEXITCODE",
+            "timeout": 120
+          }
+        ]
+      }
+    ]
+  }
+}

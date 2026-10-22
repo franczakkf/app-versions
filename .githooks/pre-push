@@ -1,4 +1,6 @@
 #!/bin/sh
 # Local gate: run check.ps1 when the project has one; its exit code decides the push.
+# tools/gate-lock.ps1 runs it once no other gate on this machine is running (one heavy gate at a time).
 [ -f ./check.ps1 ] || exit 0
-pwsh -NoProfile -File ./check.ps1
+[ -f ./tools/gate-lock.ps1 ] || exec pwsh -NoProfile -File ./check.ps1
+exec pwsh -NoProfile -File ./tools/gate-lock.ps1 ./check.ps1
