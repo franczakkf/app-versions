@@ -1,4 +1,4 @@
 {
-  "notes": "1.6.1 — odmowa serwisu mowi o przestarzalym silniku, gdy ma nowsze wydania; pietnascie regul warstwy zastosowan dostalo straznikow po serii mutacyjnej",
+  "notes": "1.6.2 — eksport na karty Yoto znowu zapisuje pliki, dlugie sciezki sa obslugiwane zamiast pomijane, praca w tle nie zatrzymuje sie do konca sesji",
   "version": "1.6.2"
 }
