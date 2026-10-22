@@ -1,5 +1,5 @@
 {
-  "url": "https://github.com/franczakkf/storytel-audio-manager/releases/tag/v1.1.0",
-  "version": "1.1.0",
-  "notes": "1.1.0 — słownictwo idzie za produktem, karta błędu mówi prawdę"
+  "version": "1.2.0",
+  "notes": "1.2.0 — odtworzenie z udziału sieciowego, odświeżone zależności",
+  "url": "https://github.com/franczakkf/storytel-audio-manager/releases/tag/v1.2.0"
 }
