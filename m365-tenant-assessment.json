@@ -1,4 +1,4 @@
 {
-  "version": "4.2.7",
-  "notes": "4.2.7 — raport dla klienta w wybranym zakresie (pełny, Microsoft, CISA SCuBA, NIS2), ponowne logowanie z okna, odporność na wolne i dławione dzierżawy, szybsza instalacja modułów."
+  "version": "4.3.0",
+  "notes": "4.3.0 — dokument dla klienta w Twojej marce (logo, kolory, okładka), podpis pod dokumentem, aktualizacja zachowuje ustawienia."
 }
